@@ -7,13 +7,13 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      name: "E-Commerce Platform",
-      image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      name: "🏆 Crazy Contest: Creative Contest Management Platform 🚀",
+      image: "https://i.ibb.co.com/TMWGmBmJ/Screenshot-139.png",
       category: "Full Stack",
-      technologies: ["React.js", "Node.js", "MongoDB", "Express.js", "Tailwind CSS", "Stripe API"],
-      description: "A comprehensive e-commerce platform featuring user authentication, product catalog, shopping cart, payment integration, and admin dashboard. Built with modern web technologies to provide a seamless shopping experience.",
-      liveLink: "https://ecommerce-demo.vercel.app",
-      githubLink: "https://github.com/username/ecommerce-platform",
+      technologies: ["React.js", "Next.js", "JavaScript", "Tailwind CSS", "Firebase", "Framer Motion", "Node.js", "Express.js", "MongoDB"],
+      description: "Crazy Contest is a modern, full-stack web application designed to connect creative individuals with contest organizers (Creators). It provides a seamless, secure, and intuitive platform for users to discover, participate in, and manage various creative contests (e.g., design, writing, coding).",
+      liveLink: "https://contest-craze-app.web.app/",
+      githubLink: "https://github.com/whahidul12/crazy-contest-client",
       challenges: [
         "Implementing secure payment processing with Stripe",
         "Managing complex state for cart and user sessions",
@@ -29,13 +29,13 @@ const Projects = () => {
     },
     {
       id: 2,
-      name: "Task Management App",
-      image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      category: "Frontend",
-      technologies: ["React.js", "Next.js", "TypeScript", "Tailwind CSS", "Firebase", "Framer Motion"],
-      description: "A modern task management application with drag-and-drop functionality, real-time collaboration, and intuitive user interface. Features include project organization, deadline tracking, and team collaboration tools.",
-      liveLink: "https://taskmanager-pro.vercel.app",
-      githubLink: "https://github.com/username/task-manager",
+      name: "ArtFolio – A Creative Artwork Showcase Platform",
+      image: "https://i.ibb.co.com/jvmKt9p1/Screenshot-138.png",
+      category: "Full-Stack",
+      technologies: ["React.js", "Next.js", "JavaScript", "Tailwind CSS", "Firebase", "Framer Motion", "Node.js", "Express.js", "MongoDB"],
+      description: "ArtFolio is a creative artwork showcase platform built to help artists upload, manage, and share their artwork online. It includes user authentication, private/public artwork management, and an elegant, responsive UI.",
+      liveLink: "https://artify-showcase-one.web.app",
+      githubLink: "https://github.com/whahidul12/art-project-showcase-client",
       challenges: [
         "Implementing smooth drag-and-drop interactions",
         "Real-time synchronization between multiple users",
@@ -43,21 +43,21 @@ const Projects = () => {
         "Performance optimization for large task lists"
       ],
       improvements: [
-        "Add calendar integration",
-        "Implement time tracking features",
+        "Add Dashboard integration",
+        "Implement Impretion tracking features",
         "Add mobile app version",
-        "Integrate with third-party tools like Slack"
+        "Integrate with third-party tools"
       ]
     },
     {
       id: 3,
-      name: "Weather Dashboard",
-      image: "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      name: "Hero-IO – Action Adventure Multiplayer Game ⚔️",
+      image: "https://i.ibb.co.com/ZRKgXSG2/Screenshot-140.png",
       category: "Frontend",
       technologies: ["React.js", "JavaScript", "CSS3", "OpenWeather API", "Chart.js", "Geolocation API"],
-      description: "An interactive weather dashboard providing current conditions, 7-day forecasts, and weather maps. Features location-based weather, search functionality, and beautiful data visualizations with charts and graphs.",
-      liveLink: "https://weather-dashboard-pro.netlify.app",
-      githubLink: "https://github.com/username/weather-dashboard",
+      description: "Hero-IO is a browser-based real-time multiplayer action game where players control heroes, move around the map, collect items, and battle other players. Built using modern JavaScript technologies, it delivers a fast, lightweight, and engaging gameplay experience.",
+      liveLink: "https://hero-io-ph.netlify.app/",
+      githubLink: "https://github.com/whahidul12/assingment-008_Hero-IO",
       challenges: [
         "Handling API rate limits and error states",
         "Creating responsive charts and visualizations",

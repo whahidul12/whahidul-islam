@@ -192,7 +192,7 @@ const Hero = () => {
               ease: "linear"
             }}
           >
-            MERN Stack
+            Full Stack
           </motion.span>
           <motion.span
             className="block text-white"
