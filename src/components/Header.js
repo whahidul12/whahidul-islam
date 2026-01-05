@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import { FaDownload } from 'react-icons/fa';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -16,10 +17,10 @@ const Header = () => {
 
   const navItems = [
     { name: 'Home', href: '#' },
-    { name: 'About Me', href: '#about' },
-    { name: 'My Skills', href: '#skills' },
+    { name: 'About', href: '#about' },
+    { name: 'Skills', href: '#skills' },
     { name: 'Projects', href: '#projects' },
-    { name: 'Contact Me', href: '#contact' }
+    { name: 'Contact', href: '#contact' }
   ];
 
   return (
@@ -50,7 +51,7 @@ const Header = () => {
               WI
             </motion.div>
             <span className="text-2xl font-bold tracking-tight text-white">
-              Wellcome
+              Whahidul
             </span>
           </motion.div>
 
@@ -90,8 +91,7 @@ const Header = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.8 }}
           >
-            Let's Connect
-            <span className="material-icons-outlined text-sm ml-2">arrow_outward</span>
+            Download CV <FaDownload className="ml-2" />
           </motion.a>
 
           {/* Mobile Menu Button */}
@@ -140,8 +140,7 @@ const Header = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5 }}
             >
-              Let's Connect
-              <span className="material-icons-outlined text-sm ml-2">arrow_outward</span>
+              Download CV <FaDownload className="ml-2" />
             </motion.a>
           </motion.div>
         )}

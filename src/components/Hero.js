@@ -147,7 +147,7 @@ const Hero = () => {
       >
         {/* Greeting */}
         <motion.div
-          className="my-6"
+          className="mb-6 mt-12"
           variants={itemVariants}
         >
           <motion.span
@@ -250,100 +250,100 @@ const Hero = () => {
             />
           </motion.a>
 
-                  {/* Social Media Links */}
-        <motion.div
-          className="flex justify-center items-center gap-6 flex-wrap"
-          variants={itemVariants}
-        >
-          {[
-            { 
-              name: 'GitHub', 
-              icon: 'fab fa-github', 
-              url: 'https://github.com/whahidul12', 
-              color: '#333',
-              hoverColor: '#24292e'
-            },
-            { 
-              name: 'LinkedIn', 
-              icon: 'fab fa-linkedin-in', 
-              url: 'https://linkedin.com/in/whahidul12', 
-              color: '#76B947',
-              hoverColor: '#2F5233'
-            },
-            { 
-              name: 'Twitter', 
-              icon: 'fab fa-twitter', 
-              url: 'https://x.com/whahidul12', 
-              color: '#1da1f2',
-              hoverColor: '#0d8bd9'
-            },
-            { 
-              name: 'Facebook', 
-              icon: 'fab fa-facebook', 
-              url: 'https://facebook.com/whahidul12', 
-              color: '#e4405f',
-              hoverColor: '#d62976'
-            }
-          ].map((social, index) => (
-            <motion.a
-              key={social.name}
-              href={social.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group relative w-12 h-12 bg-gray-800/50 hover:bg-gray-700/50 backdrop-blur-sm rounded-full flex items-center justify-center border border-gray-700 hover:border-primary/50 transition-all duration-300"
-              initial={{ opacity: 0, y: 20, scale: 0.8 }}
-              animate={{ opacity: 1, y: 0, scale: 1 }}
-              transition={{ 
-                delay: 1.2 + index * 0.1,
-                duration: 0.5,
-                type: "spring",
-                stiffness: 200
-              }}
-              whileHover={{ 
-                scale: 1.15,
-                y: -5,
-                boxShadow: `0 10px 25px -5px ${social.color}40`
-              }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <motion.i
-                className={`${social.icon} text-lg text-gray-400 group-hover:text-white transition-colors duration-300`}
-                whileHover={{ 
-                  color: social.color,
-                  textShadow: `0 0 10px ${social.color}60`
-                }}
-              />
-              
-              {/* Floating Animation */}
-              <motion.div
-                className="absolute inset-0 rounded-full"
-                animate={{
-                  boxShadow: [
-                    `0 0 0 0 ${social.color}00`,
-                    `0 0 0 8px ${social.color}20`,
-                    `0 0 0 0 ${social.color}00`
-                  ]
-                }}
+          {/* Social Media Links */}
+          <motion.div
+            className="flex justify-center items-center gap-6 flex-wrap"
+            variants={itemVariants}
+          >
+            {[
+              {
+                name: 'GitHub',
+                icon: 'fab fa-github',
+                url: 'https://github.com/whahidul12',
+                color: '#333',
+                hoverColor: '#24292e'
+              },
+              {
+                name: 'LinkedIn',
+                icon: 'fab fa-linkedin-in',
+                url: 'https://linkedin.com/in/whahidul12',
+                color: '#76B947',
+                hoverColor: '#2F5233'
+              },
+              {
+                name: 'Twitter',
+                icon: 'fab fa-twitter',
+                url: 'https://x.com/whahidul12',
+                color: '#1da1f2',
+                hoverColor: '#0d8bd9'
+              },
+              {
+                name: 'Facebook',
+                icon: 'fab fa-facebook',
+                url: 'https://facebook.com/whahidul12',
+                color: '#e4405f',
+                hoverColor: '#d62976'
+              }
+            ].map((social, index) => (
+              <motion.a
+                key={social.name}
+                href={social.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group relative w-12 h-12 bg-gray-800/50 hover:bg-gray-700/50 backdrop-blur-sm rounded-full flex items-center justify-center border border-gray-700 hover:border-primary/50 transition-all duration-300"
+                initial={{ opacity: 0, y: 20, scale: 0.8 }}
+                animate={{ opacity: 1, y: 0, scale: 1 }}
                 transition={{
-                  duration: 2,
-                  repeat: Infinity,
-                  delay: index * 0.3,
-                  ease: "easeInOut"
+                  delay: 1.2 + index * 0.1,
+                  duration: 0.5,
+                  type: "spring",
+                  stiffness: 200
                 }}
-              />
-
-              {/* Tooltip */}
-              <motion.div
-                className="absolute -top-12 left-1/2 transform -translate-x-1/2 px-3 py-1 bg-gray-900 text-white text-xs rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none whitespace-nowrap z-10"
-                initial={{ y: 10 }}
-                whileHover={{ y: 0 }}
+                whileHover={{
+                  scale: 1.15,
+                  y: -5,
+                  boxShadow: `0 10px 25px -5px ${social.color}40`
+                }}
+                whileTap={{ scale: 0.95 }}
               >
-                {social.name}
-                <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-gray-900"></div>
-              </motion.div>
-            </motion.a>
-          ))}
-        </motion.div>
+                <motion.i
+                  className={`${social.icon} text-lg text-gray-400 group-hover:text-white transition-colors duration-300`}
+                  whileHover={{
+                    color: social.color,
+                    textShadow: `0 0 10px ${social.color}60`
+                  }}
+                />
+
+                {/* Floating Animation */}
+                <motion.div
+                  className="absolute inset-0 rounded-full"
+                  animate={{
+                    boxShadow: [
+                      `0 0 0 0 ${social.color}00`,
+                      `0 0 0 8px ${social.color}20`,
+                      `0 0 0 0 ${social.color}00`
+                    ]
+                  }}
+                  transition={{
+                    duration: 2,
+                    repeat: Infinity,
+                    delay: index * 0.3,
+                    ease: "easeInOut"
+                  }}
+                />
+
+                {/* Tooltip */}
+                <motion.div
+                  className="absolute -top-12 left-1/2 transform -translate-x-1/2 px-3 py-1 bg-gray-900 text-white text-xs rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none whitespace-nowrap z-10"
+                  initial={{ y: 10 }}
+                  whileHover={{ y: 0 }}
+                >
+                  {social.name}
+                  <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-gray-900"></div>
+                </motion.div>
+              </motion.a>
+            ))}
+          </motion.div>
         </motion.div>
 
         {/* Scroll Indicator */}

@@ -6,6 +6,7 @@ import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Testimonials from './components/Testimonials';
 import Footer from './components/Footer';
+import Contact from './components/Contact';
 
 function App() {
   useEffect(() => {
@@ -20,7 +21,7 @@ function App() {
       <About />
       <Skills />
       <Projects />
-      <Testimonials />
+      <Contact />
       <Footer />
     </div>
   );
