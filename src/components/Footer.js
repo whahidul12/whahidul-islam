@@ -69,15 +69,14 @@ const Footer = () => {
                 whileHover={{ rotate: 360 }}
                 transition={{ duration: 0.6 }}
               >
-                SK
+                WI
               </motion.div>
               <span className="text-2xl font-bold tracking-tight text-white">
-                Saira
+                Whahidul Islam
               </span>
             </motion.div>
             <p className="text-gray-400 text-sm mb-6 leading-relaxed">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper
-              mattis, pulvinar dapibus leo.
+              Full-Stack MERN Developer focused on building clean, scalable, and user-friendly web applications. Passionate about turning ideas into reliable digital experiences through thoughtful design and solid development.
             </p>
           </motion.div>
 
@@ -149,7 +148,7 @@ const Footer = () => {
             <p className="text-sm text-gray-400 mb-4">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             </p>
-            
+
             {/* Newsletter Form */}
             <motion.form
               className="flex mb-6"
@@ -216,7 +215,7 @@ const Footer = () => {
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.2 }}
           >
-            Copyright © 2024 Saira By Roxthemes. All Rights Reserved.
+            Copyright © 2026 By Whahidul Islam. All Rights Reserved.
           </motion.p>
           <motion.div
             className="space-x-4 mt-4 md:mt-0"

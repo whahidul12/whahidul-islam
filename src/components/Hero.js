@@ -279,7 +279,7 @@ const Hero = () => {
 
         {/* Scroll Indicator */}
         <motion.div
-          className="absolute bottom-8 right-8 transform -translate-x-1/2"
+          className="absolute -bottom-20 left-[48%] transform -translate-x-1/2"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 2, duration: 0.8 }}

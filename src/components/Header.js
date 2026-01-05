@@ -30,14 +30,13 @@ const Header = () => {
     >
       <div className="container mx-auto px-4">
         <motion.nav
-          className={`bg-secondary/90 backdrop-blur-md rounded-full px-6 py-3 flex justify-between items-center shadow-lg border border-gray-800 transition-all duration-300 ${
-            isScrolled ? 'shadow-xl' : ''
-          }`}
+          className={`bg-secondary/90 backdrop-blur-md rounded-full px-6 py-3 flex justify-between items-center shadow-lg border border-gray-800 transition-all duration-300 ${isScrolled ? 'shadow-xl' : ''
+            }`}
           whileHover={{ scale: 1.01 }}
           transition={{ type: "spring", stiffness: 300 }}
         >
           {/* Logo */}
-          <motion.div 
+          <motion.div
             className="flex items-center space-x-2"
             whileHover={{ scale: 1.05 }}
             transition={{ type: "spring", stiffness: 400 }}
@@ -47,10 +46,10 @@ const Header = () => {
               whileHover={{ rotate: 360 }}
               transition={{ duration: 0.6 }}
             >
-              SK
+              WI
             </motion.div>
             <span className="text-2xl font-bold tracking-tight text-white">
-              Saira
+              Wellcome
             </span>
           </motion.div>
 
@@ -132,7 +131,7 @@ const Header = () => {
                 </motion.li>
               ))}
             </ul>
-            
+
             <motion.a
               className="mt-6 w-full inline-flex items-center justify-center px-6 py-3 bg-primary hover:bg-orange-600 text-white text-sm font-medium rounded-full transition-colors shadow-lg shadow-orange-500/30"
               href="#contact"
