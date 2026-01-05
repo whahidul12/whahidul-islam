@@ -154,7 +154,7 @@ const Hero = () => {
             whileHover={{ scale: 1.05, backgroundColor: "rgba(255, 122, 80, 0.15)" }}
             transition={{ duration: 0.3 }}
           >
-            👋 Hello, I'm Saira Karim
+            👋 Hello, I'm Whahidul Islam
           </motion.span>
         </motion.div>
 
