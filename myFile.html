@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Saira - Portfolio Website</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#FF7A50", // Orange accent color from screenshot
+                        secondary: "#101018", // Dark background
+                        "secondary-light": "#1B1B25", // Slightly lighter dark background for cards
+                        "background-light": "#ffffff",
+                        "background-dark": "#050508", // Deepest dark background
+                        "text-light": "#6b7280",
+                        "text-dark": "#9CA3AF",
+                    },
+                    fontFamily: {
+                        display: ['Jost', 'sans-serif'],
+                        body: ['Jost', 'sans-serif'],
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.75rem",
+                    },
+                },
+            },
+        };
+    </script>
+    <style>
+        body {
+            font-family: 'Jost', sans-serif;
+        }
+
+        .gradient-overlay {
+            background: linear-gradient(rgba(5, 5, 8, 0.8), rgba(5, 5, 8, 0.95));
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #050508;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #FF7A50;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #e06840;
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-gray-800 dark:text-gray-200 transition-colors duration-300">
+    <header class="fixed top-0 w-full z-50 py-4 transition-all duration-300">
+        <div class="container mx-auto px-4">
+            <nav
+                class="bg-white dark:bg-secondary/90 backdrop-blur-md rounded-full px-6 py-3 flex justify-between items-center shadow-lg border border-gray-100 dark:border-gray-800">
+                <div class="flex items-center space-x-2">
+                    <div
+                        class="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white font-bold text-xl shadow-md">
+                        SK</div>
+                    <span class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Saira</span>
+                </div>
+                <ul class="hidden lg:flex items-center space-x-8 text-sm font-medium text-gray-600 dark:text-gray-300">
+                    <li><a class="hover:text-primary transition-colors" href="#">Home</a></li>
+                    <li><a class="hover:text-primary transition-colors" href="#">My Skills</a></li>
+                    <li><a class="hover:text-primary transition-colors" href="#">Projects</a></li>
+                    <li><a class="hover:text-primary transition-colors" href="#">My Service</a></li>
+                    <li><a class="hover:text-primary transition-colors" href="#">Contact Me</a></li>
+                </ul>
+
+                <a class="
+                                        
+                                        
+                                        
+                                        
+                                        hidden md:inline-flex items-center justify-center px-6 py-2 bg-primary hover:bg-orange-600 text-white text-sm font-medium rounded-full transition-colors shadow-lg shadow-orange-500/30"
+                    href="https://drive.google.com/uc?export=download&id=13pmfkyU8um0gMk0thQh7lqnUXpo8_u3R"
+                    download="Whahidul_islam_resume.d">
+                    Download my resume <span class="material-icons-outlined text-sm ml-2">download</span>
+                </a>
+                <button class="lg:hidden text-gray-700 dark:text-white">
+                    <span class="material-icons-outlined text-2xl">menu</span>
+                </button>
+            </nav>
+        </div>
+    </header>
+    <div class="relative pt-40 pb-20 bg-gray-50 dark:bg-[#08080C] overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
+            <img alt="Abstract background pattern" class="w-full h-full object-cover"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyF4FO6G1JZ_9et2pOtNLJPvnYXn_Lql_sKy_X4Lm8KXRexPOwTf5k9fSw2CtRPqUBrW2jCtDBIkJEwHZiIEmjhpdYKUQT3bHAAPShR9SaapcrbqHpwwztAfPgIvc4k7DGWyON83wHnJuwYP84HNKnq07yklASzid3p5RuiBsWeLqXMKdCcy8QH_sMkDTM-ydLk34OLvJ-7QT-_TrGl15FLEtgJVijQT-PDQtul3VBqfzvTEWe0oLeXgse-gIKJ6w8hCZwHHFzpJPT" />
+        </div>
+        <div class="container mx-auto px-4 text-center relative z-10">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">About Me</h1>
+            <div class="flex items-center justify-center space-x-2 text-sm text-gray-500 dark:text-gray-400">
+                <a class="hover:text-primary transition-colors" href="#">Home</a>
+                <span class="material-icons-outlined text-xs">chevron_right</span>
+                <span class="text-primary">About Me</span>
+            </div>
+        </div>
+    </div>
+    <section class="py-20 bg-background-light dark:bg-background-dark">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+                <div class="w-full lg:w-1/2 flex justify-center relative">
+                    <div class="absolute top-0 right-10 w-24 h-24 bg-primary/20 rounded-full blur-xl animate-pulse">
+                    </div>
+                    <div class="absolute bottom-10 left-10 w-32 h-32 bg-purple-500/20 rounded-full blur-xl"></div>
+                    <div class="relative w-80 h-80 md:w-96 md:h-96">
+                        <div
+                            class="absolute inset-0 border-2 border-primary rounded-full animate-[spin_10s_linear_infinite] border-dashed opacity-30">
+                        </div>
+                        <div class="absolute -top-4 -left-4 w-16 h-16 bg-primary rounded-full z-0 opacity-80"></div>
+                        <div
+                            class="absolute bottom-10 -right-6 w-12 h-12 bg-yellow-400 rounded-full z-10 border-4 border-white dark:border-background-dark">
+                        </div>
+                        <div
+                            class="relative w-full h-full rounded-full overflow-hidden border-8 border-gray-100 dark:border-secondary-light shadow-2xl">
+                            <img alt="Portrait of Saira" class="w-full h-full object-cover"
+                                src="https://avatars.githubusercontent.com/u/117866392?v=4O" />
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full lg:w-1/2">
+                    <span
+                        class="inline-block py-1 px-3 rounded-full bg-gray-100 dark:bg-secondary-light border border-gray-200 dark:border-gray-700 text-xs font-semibold uppercase tracking-wider text-gray-600 dark:text-gray-300 mb-4">About
+                        Me</span>
+                    <h2
+                        class="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-6 text-gray-900 dark:text-white">
+                        Get a website that will make a <span class="text-primary">lasting impression</span> on your
+                        audience!!!
+                    </h2>
+                    <p class="text-gray-600 dark:text-text-dark mb-8 leading-relaxed">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper
+                        mattis, pulvinar dapibus leo. Design is not just what it looks like and feels like. Design is
+                        how it works.
+                    </p>
+                    <div
+                        class="grid grid-cols-1 md:grid-cols-2 gap-y-6 gap-x-8 mb-8 p-6 bg-gray-50 dark:bg-secondary-light rounded-2xl border border-gray-100 dark:border-gray-800">
+                        <div>
+                            <p class="text-primary text-sm font-semibold mb-1">Name:</p>
+                            <p class="font-medium text-gray-800 dark:text-gray-200">Saira Karim</p>
+                        </div>
+                        <div>
+                            <p class="text-primary text-sm font-semibold mb-1">Phone:</p>
+                            <p class="font-medium text-gray-800 dark:text-gray-200">+(234) 567-8910</p>
+                        </div>
+                        <div>
+                            <p class="text-primary text-sm font-semibold mb-1">Email:</p>
+                            <p class="font-medium text-gray-800 dark:text-gray-200">example@domain.com</p>
+                        </div>
+                        <div>
+                            <p class="text-primary text-sm font-semibold mb-1">Twitter:</p>
+                            <p class="font-medium text-gray-800 dark:text-gray-200">Sairakarim0011</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap gap-4">
+                        <a class="inline-flex items-center justify-center px-8 py-3 bg-primary hover:bg-orange-600 text-white font-medium rounded-full transition-all shadow-lg shadow-orange-500/30 transform hover:-translate-y-1"
+                            href="#">
+                            Let's Talk <span class="material-icons-outlined text-sm ml-2">arrow_outward</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-20 bg-gray-50 dark:bg-[#08080C]">
+        <div class="container mx-auto px-4">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-primary font-semibold uppercase tracking-widest text-sm mb-2">My Skills</h2>
+                <h3 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">My Work Skills</h3>
+                <p class="text-gray-600 dark:text-text-dark">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
+                    elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div
+                    class="bg-white dark:bg-secondary-light p-8 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-800 text-center hover:shadow-lg transition-all duration-300 group">
+                    <div
+                        class="w-16 h-16 mx-auto mb-4 bg-purple-100 dark:bg-gray-800 rounded-xl flex items-center justify-center group-hover:bg-primary/10 transition-colors">
+                        <i class="fab fa-figma text-3xl text-purple-600 group-hover:text-primary transition-colors"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 dark:text-white mb-4">Figma</h4>
+                    <div class="relative w-full h-4 bg-gray-100 dark:bg-gray-700 rounded-full overflow-hidden">
+                        <div class="absolute top-0 left-0 h-full bg-primary rounded-full text-[10px] text-white flex items-center justify-center font-bold"
+                            style="width: 99%">99%</div>
+                    </div>
+                </div>
+                <div
+                    class="bg-white dark:bg-secondary-light p-8 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-800 text-center hover:shadow-lg transition-all duration-300 group">
+                    <div
+                        class="w-16 h-16 mx-auto mb-4 bg-blue-100 dark:bg-gray-800 rounded-xl flex items-center justify-center group-hover:bg-primary/10 transition-colors">
+                        <i
+                            class="fab fa-wordpress text-3xl text-blue-600 group-hover:text-primary transition-colors"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 dark:text-white mb-4">WordPress</h4>
+                    <div class="relative w-full h-4 bg-gray-100 dark:bg-gray-700 rounded-full overflow-hidden">
+                        <div class="absolute top-0 left-0 h-full bg-primary rounded-full text-[10px] text-white flex items-center justify-center font-bold"
+                            style="width: 99%">99%</div>
+                    </div>
+                </div>
+                <div
+                    class="bg-white dark:bg-secondary-light p-8 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-800 text-center hover:shadow-lg transition-all duration-300 group">
+                    <div
+                        class="w-16 h-16 mx-auto mb-4 bg-cyan-100 dark:bg-gray-800 rounded-xl flex items-center justify-center group-hover:bg-primary/10 transition-colors">
+                        <i class="fas fa-code text-3xl text-cyan-600 group-hover:text-primary transition-colors"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 dark:text-white mb-4">Web Development</h4>
+                    <div class="relative w-full h-4 bg-gray-100 dark:bg-gray-700 rounded-full overflow-hidden">
+                        <div class="absolute top-0 left-0 h-full bg-primary rounded-full text-[10px] text-white flex items-center justify-center font-bold"
+                            style="width: 95%">95%</div>
+                    </div>
+                </div>
+                <div
+                    class="bg-white dark:bg-secondary-light p-8 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-800 text-center hover:shadow-lg transition-all duration-300 group">
+                    <div
+                        class="w-16 h-16 mx-auto mb-4 bg-pink-100 dark:bg-gray-800 rounded-xl flex items-center justify-center group-hover:bg-primary/10 transition-colors">
+                        <i class="fas fa-palette text-3xl text-pink-600 group-hover:text-primary transition-colors"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 dark:text-white mb-4">Web Design</h4>
+                    <div class="relative w-full h-4 bg-gray-100 dark:bg-gray-700 rounded-full overflow-hidden">
+                        <div class="absolute top-0 left-0 h-full bg-primary rounded-full text-[10px] text-white flex items-center justify-center font-bold"
+                            style="width: 97%">97%</div>
+                    </div>
+                </div>
+                <div
+                    class="bg-white dark:bg-secondary-light p-8 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-800 text-center hover:shadow-lg transition-all duration-300 group">
+                    <div
+                        class="w-16 h-16 mx-auto mb-4 bg-yellow-100 dark:bg-gray-800 rounded-xl flex items-center justify-center group-hover:bg-primary/10 transition-colors">
+                        <i
+                            class="fab fa-sketch text-3xl text-yellow-600 group-hover:text-primary transition-colors"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 dark:text-white mb-4">Sketch</h4>
+                    <div class="relative w-full h-4 bg-gray-100 dark:bg-gray-700 rounded-full overflow-hidden">
+                        <div class="absolute top-0 left-0 h-full bg-primary rounded-full text-[10px] text-white flex items-center justify-center font-bold"
+                            style="width: 93%">93%</div>
+                    </div>
+                </div>
+                <div
+                    class="bg-white dark:bg-secondary-light p-8 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-800 text-center hover:shadow-lg transition-all duration-300 group">
+                    <div
+                        class="w-16 h-16 mx-auto mb-4 bg-fuchsia-100 dark:bg-gray-800 rounded-xl flex items-center justify-center group-hover:bg-primary/10 transition-colors">
+                        <span
+                            class="text-2xl font-black text-fuchsia-600 group-hover:text-primary transition-colors">Xd</span>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 dark:text-white mb-4">Adobe Xd</h4>
+                    <div class="relative w-full h-4 bg-gray-100 dark:bg-gray-700 rounded-full overflow-hidden">
+                        <div class="absolute top-0 left-0 h-full bg-primary rounded-full text-[10px] text-white flex items-center justify-center font-bold"
+                            style="width: 99%">99%</div>
+                    </div>
+                </div>
+                <div
+                    class="bg-white dark:bg-secondary-light p-8 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-800 text-center hover:shadow-lg transition-all duration-300 group">
+                    <div
+                        class="w-16 h-16 mx-auto mb-4 bg-indigo-100 dark:bg-gray-800 rounded-xl flex items-center justify-center group-hover:bg-primary/10 transition-colors">
+                        <i class="fas fa-video text-3xl text-indigo-600 group-hover:text-primary transition-colors"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 dark:text-white mb-4">Video Editing</h4>
+                    <div class="relative w-full h-4 bg-gray-100 dark:bg-gray-700 rounded-full overflow-hidden">
+                        <div class="absolute top-0 left-0 h-full bg-primary rounded-full text-[10px] text-white flex items-center justify-center font-bold"
+                            style="width: 94%">94%</div>
+                    </div>
+                </div>
+                <div
+                    class="bg-white dark:bg-secondary-light p-8 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-800 text-center hover:shadow-lg transition-all duration-300 group">
+                    <div
+                        class="w-16 h-16 mx-auto mb-4 bg-green-100 dark:bg-gray-800 rounded-xl flex items-center justify-center group-hover:bg-primary/10 transition-colors">
+                        <i
+                            class="fas fa-mobile-alt text-3xl text-green-600 group-hover:text-primary transition-colors"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 dark:text-white mb-4">Mobile App</h4>
+                    <div class="relative w-full h-4 bg-gray-100 dark:bg-gray-700 rounded-full overflow-hidden">
+                        <div class="absolute top-0 left-0 h-full bg-primary rounded-full text-[10px] text-white flex items-center justify-center font-bold"
+                            style="width: 90%">90%</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-20 bg-background-light dark:bg-background-dark">
+        <div class="container mx-auto px-4">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-primary font-semibold uppercase tracking-widest text-sm mb-2">What I Do</h2>
+                <h3 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">My Project</h3>
+                <p class="text-gray-600 dark:text-text-dark">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
+                    elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div
+                    class="bg-gray-50 dark:bg-secondary-light rounded-2xl overflow-hidden border border-gray-100 dark:border-gray-800 group hover:border-primary/50 transition-all duration-300">
+                    <div class="p-8 pb-4">
+                        <h4 class="text-xl font-bold text-gray-900 dark:text-white">UI/UX Design</h4>
+                    </div>
+                    <div class="px-4">
+                        <div
+                            class="relative aspect-video rounded-xl overflow-hidden mb-6 group-hover:shadow-lg transition-all">
+                            <img alt="UI UX Design workspace"
+                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCDnPSN-gyA59DnD-ufhcuvV6v8uv7HcATDyJHnDXhlHGvP-hVjmO9lV0DvdxBGqt0xH6H778pGLOz-y4FR6GoDeAr8Gah8DQGQvgEXSEdPXMx462tnVz0c1JHy-dUdgEh44FpzkhgOvqY5uqkQ3tDuUZeH9DGj7MHMexrxm9CIEnBz8P4EM_Ywl0rUvjLbk1n-B3Bla1_5IdrrPA_Uq7vYiUQOcX4q81ZLwBpYaoLmBxi6TEDx3VGQoCY7KCYoCXV_AyPvq95j8pgA" />
+                            <div
+                                class="absolute bottom-4 right-4 w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white shadow-lg transform translate-y-14 group-hover:translate-y-0 transition-transform duration-300">
+                                <span class="material-icons-outlined text-sm">arrow_outward</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="bg-gray-50 dark:bg-secondary-light rounded-2xl overflow-hidden border border-gray-100 dark:border-gray-800 group hover:border-primary/50 transition-all duration-300">
+                    <div class="p-8 pb-4">
+                        <h4 class="text-xl font-bold text-gray-900 dark:text-white">Web Design</h4>
+                    </div>
+                    <div class="px-4">
+                        <div
+                            class="relative aspect-video rounded-xl overflow-hidden mb-6 group-hover:shadow-lg transition-all">
+                            <img alt="Web design wireframes"
+                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbIlijywa6se5C_tRGE1HyakGMsMWozePbt9cycjSrKa_tVYvRdMI_ah_SM9NQoapFfs6FqI-b3KD4JxKd6PF2h2ZUtfn5bSGshFcEwMS91tLP0npAHlf7qDwKmjpVWlwAtacovCffoJ0YIcbbVnUU0NYkIQkAOrl-6FBkDKoyNMXDPMnzb__36j76tahd3_gxitJc_tWRrm0BnG_o2QPtaXEL2mA7XQBP0-lqQBhq3yzriRkPrMXS3iNYVoP2lQxvlfxqBR02n0e4" />
+                            <div
+                                class="absolute bottom-4 right-4 w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white shadow-lg transform translate-y-14 group-hover:translate-y-0 transition-transform duration-300">
+                                <span class="material-icons-outlined text-sm">arrow_outward</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="bg-gray-50 dark:bg-secondary-light rounded-2xl overflow-hidden border border-gray-100 dark:border-gray-800 group hover:border-primary/50 transition-all duration-300">
+                    <div class="p-8 pb-4">
+                        <h4 class="text-xl font-bold text-gray-900 dark:text-white">Web Development</h4>
+                    </div>
+                    <div class="px-4">
+                        <div
+                            class="relative aspect-video rounded-xl overflow-hidden mb-6 group-hover:shadow-lg transition-all">
+                            <img alt="Coding setup"
+                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8_KemJHOi1CAL0Dg-eT-xMOnr2RGAFOyDT0OGW025LrQIph0bIN1RNWFcP3X0jRIa8rf1qrErQd_6GkNMRDm0rsy8nqojiNcMjPJ0gdCqpPxLeajDOltZPeOKDuLM_D_uaOfuBqN86kxIyTmElxJyCtIUZjY7RdUolQWEhf2EjzESUfRCtDirW77fqp0Sa4pOzgR6Tsv63LtDHukKrrnDFx9UmeijPEQ54ASZWnlfM8XBnINKMpP5BQupIQJ1zAqyJSClomEojIUv" />
+                            <div
+                                class="absolute bottom-4 right-4 w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white shadow-lg transform translate-y-14 group-hover:translate-y-0 transition-transform duration-300">
+                                <span class="material-icons-outlined text-sm">arrow_outward</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-12">
+                <a class="inline-flex items-center justify-center px-8 py-3 bg-primary hover:bg-orange-600 text-white font-medium rounded-full transition-all shadow-lg shadow-orange-500/30"
+                    href="#">
+                    See All <span class="material-icons-outlined text-sm ml-2">arrow_outward</span>
+                </a>
+            </div>
+        </div>
+    </section>
+    <section class="py-20 bg-gray-50 dark:bg-[#08080C]">
+        <div class="container mx-auto px-4">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-primary font-semibold uppercase tracking-widest text-sm mb-2">Testimonials</h2>
+                <h3 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">What My Clients Say</h3>
+                <p class="text-gray-600 dark:text-text-dark">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
+                    elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div
+                    class="bg-white dark:bg-secondary-light p-8 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-800 relative group hover:-translate-y-1 transition-transform duration-300">
+                    <div class="flex text-primary mb-4 text-xs">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 rounded-full overflow-hidden mr-4 border-2 border-primary/20">
+                            <img alt="Client Robert" class="w-full h-full object-cover"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzk_a29j9qmH_AVIDpA-HiPGqSA0tOkYrEblzfJzCbHUwyNGzR2XS1IiXcXS0HP5UnronsV-1GYWBNy-XZJZ5GLgoD3-pl2iCuYipZ_51oWina7h8cYizvKIPVoPHwwa3c8hPdmTBD5ME5k0nvBUkwAus726uP_1FbPdBD6Zicjtk80Xijt7sRmO6YWclaaUXbOiCNEbQwL0Z2sosCmeU1JO_gbzypUwTlNbzDvzLOK4abE2wNyzJkuPFroWB5mBbANXe3nW7N4gZ_" />
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-900 dark:text-white text-sm">Robert J.</h4>
+                            <p class="text-xs text-gray-500">CEO at Acme</p>
+                        </div>
+                        <i
+                            class="fas fa-quote-right ml-auto text-4xl text-gray-200 dark:text-gray-700 group-hover:text-primary/20 transition-colors"></i>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua.
+                    </p>
+                </div>
+                <div
+                    class="bg-white dark:bg-secondary-light p-8 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-800 relative group hover:-translate-y-1 transition-transform duration-300">
+                    <div class="flex text-primary mb-4 text-xs">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 rounded-full overflow-hidden mr-4 border-2 border-primary/20">
+                            <img alt="Client Janica" class="w-full h-full object-cover"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5AL0qBJYt79qr0ggjD2UKZ_SGWFhQ9saG2EssHgWHQnaRQKmzZewztIqsDDKwyrzTd22jWEnj_SbukSws0TJeI2VhygB5EWUsXt-BGichkyhPE6RtAqNOvsIZZHEex7l0RS4W4DPHFXc20ph-V4Qd1Xwt7lwKUoXebfsJUZtUm6K-aNRCoqznJEZsWTqeKrxLYgWBNpifaOLp8o4q_7i49oF3bMk033pnpDMWsyM6H3-ZVJ9bqPuot8XXaBv89nPICd7nVuGHtkhk" />
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-900 dark:text-white text-sm">Janica Z.</h4>
+                            <p class="text-xs text-gray-500">Designation</p>
+                        </div>
+                        <i
+                            class="fas fa-quote-right ml-auto text-4xl text-gray-200 dark:text-gray-700 group-hover:text-primary/20 transition-colors"></i>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua.
+                    </p>
+                </div>
+                <div
+                    class="bg-white dark:bg-secondary-light p-8 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-800 relative group hover:-translate-y-1 transition-transform duration-300">
+                    <div class="flex text-primary mb-4 text-xs">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 rounded-full overflow-hidden mr-4 border-2 border-primary/20">
+                            <img alt="Client Justin" class="w-full h-full object-cover"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6v1WG_NczjepTbRi7I7WCMYplbgA46mOL0sqK1aRPIwp0Gv3GSQ7OrxWwfb921ZZOJziWtQg39Rn4S5ey8XnOKBOloKQujgAREwY-UDHt5rIRc9vmM_RNoz8FXiM1I7ZH0sXIqcNXJ4J0_jyVyph2NNNUIocKazKlVDkuFlwZXmruPF6QlQMBBPP5rWghjSYWXL26vi8411jWdQ19LUCfNfSdJ8tzd3uqouZZevlyev48PIf-JOkvrnpMNUr2DfcqmVC24g5CmUWV" />
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-900 dark:text-white text-sm">Justin B.</h4>
+                            <p class="text-xs text-gray-500">Designation</p>
+                        </div>
+                        <i
+                            class="fas fa-quote-right ml-auto text-4xl text-gray-200 dark:text-gray-700 group-hover:text-primary/20 transition-colors"></i>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="bg-gray-100 dark:bg-background-dark pt-20 pb-8 border-t border-gray-200 dark:border-gray-800">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <div>
+                    <div class="flex items-center space-x-2 mb-6">
+                        <div
+                            class="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white font-bold text-xl shadow-md">
+                            SK</div>
+                        <span class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Saira</span>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-400 text-sm mb-6 leading-relaxed">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper
+                        mattis, pulvinar dapibus leo.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold text-gray-900 dark:text-white mb-6">Navigation</h4>
+                    <ul class="space-y-3 text-sm text-gray-600 dark:text-gray-400">
+                        <li><a class="hover:text-primary transition-colors flex items-center" href="#"><span
+                                    class="material-icons-outlined text-xs mr-2">chevron_right</span> Home</a></li>
+                        <li><a class="hover:text-primary transition-colors flex items-center" href="#"><span
+                                    class="material-icons-outlined text-xs mr-2">chevron_right</span> Services</a></li>
+                        <li><a class="hover:text-primary transition-colors flex items-center" href="#"><span
+                                    class="material-icons-outlined text-xs mr-2">chevron_right</span> Portfolio</a></li>
+                        <li><a class="hover:text-primary transition-colors flex items-center" href="#"><span
+                                    class="material-icons-outlined text-xs mr-2">chevron_right</span> About</a></li>
+                        <li><a class="hover:text-primary transition-colors flex items-center" href="#"><span
+                                    class="material-icons-outlined text-xs mr-2">chevron_right</span> Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold text-gray-900 dark:text-white mb-6">Contact</h4>
+                    <ul class="space-y-4 text-sm text-gray-600 dark:text-gray-400">
+                        <li class="flex items-start">
+                            <span class="material-icons-outlined text-primary text-lg mr-3 mt-0.5">call</span>
+                            <span>+(234) 567-8910</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="material-icons-outlined text-primary text-lg mr-3 mt-0.5">email</span>
+                            <span>example@domain.com</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="material-icons-outlined text-primary text-lg mr-3 mt-0.5">location_on</span>
+                            <span>Kazipur, Sirajganj, BD</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="material-icons-outlined text-primary text-lg mr-3 mt-0.5">schedule</span>
+                            <span>Mon - Fri / 8am-10pm</span>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold text-gray-900 dark:text-white mb-6">Get the latest information</h4>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">Lorem ipsum dolor sit amet, consectetur
+                        adipiscing elit.</p>
+                    <form class="flex mb-6">
+                        <input
+                            class="w-full bg-white dark:bg-secondary-light border border-gray-200 dark:border-gray-700 rounded-l-lg px-4 py-2 text-sm focus:outline-none focus:border-primary dark:text-white"
+                            placeholder="Your email" type="email" />
+                        <button
+                            class="bg-primary hover:bg-orange-600 text-white px-4 py-2 rounded-r-lg transition-colors"
+                            type="submit">
+                            <span class="material-icons-outlined text-sm">arrow_outward</span>
+                        </button>
+                    </form>
+                    <div class="flex space-x-4">
+                        <a class="w-8 h-8 rounded bg-gray-200 dark:bg-secondary-light text-gray-600 dark:text-gray-400 flex items-center justify-center hover:bg-primary hover:text-white transition-colors"
+                            href="#"><i class="fab fa-facebook-f text-xs"></i></a>
+                        <a class="w-8 h-8 rounded bg-gray-200 dark:bg-secondary-light text-gray-600 dark:text-gray-400 flex items-center justify-center hover:bg-primary hover:text-white transition-colors"
+                            href="#"><i class="fab fa-twitter text-xs"></i></a>
+                        <a class="w-8 h-8 rounded bg-gray-200 dark:bg-secondary-light text-gray-600 dark:text-gray-400 flex items-center justify-center hover:bg-primary hover:text-white transition-colors"
+                            href="#"><i class="fab fa-linkedin-in text-xs"></i></a>
+                        <a class="w-8 h-8 rounded bg-gray-200 dark:bg-secondary-light text-gray-600 dark:text-gray-400 flex items-center justify-center hover:bg-primary hover:text-white transition-colors"
+                            href="#"><i class="fab fa-instagram text-xs"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="border-t border-gray-200 dark:border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500 dark:text-gray-500">
+                <p>Copyright © 2024 Saira By Roxthemes. All Rights Reserved.</p>
+                <div class="space-x-4 mt-4 md:mt-0">
+                    <a class="hover:text-primary transition-colors" href="#">Terms &amp; Service</a>
+                    <span>|</span>
+                    <a class="hover:text-primary transition-colors" href="#">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
