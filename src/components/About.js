@@ -25,10 +25,10 @@ const About = () => {
   };
 
   const contactInfo = [
-    { label: 'Name:', value: 'Saira Karim' },
-    { label: 'Phone:', value: '+(234) 567-8910' },
-    { label: 'Email:', value: 'example@domain.com' },
-    { label: 'Twitter:', value: 'Sairakarim0011' }
+    { label: 'Name:', value: 'Whahidul Islam' },
+    { label: 'Phone:', value: '+880 183 943 9896' },
+    { label: 'Email:', value: 'whahidul.islam.tech@gmail.com' },
+    { label: 'Username (all):', value: 'whahidul12' }
   ];
 
   return (

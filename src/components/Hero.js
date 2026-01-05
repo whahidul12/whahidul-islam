@@ -124,7 +124,7 @@ const Hero = () => {
         ))}
 
         {/* Grid Pattern */}
-        <div 
+        <div
           className="absolute inset-0 opacity-5"
           style={{
             backgroundImage: `
@@ -190,7 +190,7 @@ const Hero = () => {
               ease: "linear"
             }}
           >
-            Developer
+            MERN Stack
           </motion.span>
           <motion.span
             className="block text-white"
@@ -207,22 +207,21 @@ const Hero = () => {
               ease: "easeInOut"
             }}
           >
-            & Designer
+            Developer
           </motion.span>
         </motion.h1>
 
         {/* Subheadline */}
         <motion.p
-          className="text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed"
+          className="text-lg md:text-xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed"
           variants={itemVariants}
         >
-          I craft exceptional digital experiences through innovative web development and stunning visual design. 
-          Specializing in <motion.span 
+          I build scalable, high-performance web applications using <motion.span
             className="text-primary font-semibold"
             whileHover={{ scale: 1.05 }}
           >
-            React, UI/UX, and modern web technologies
-          </motion.span> that bring ideas to life.
+            React, Next.js, Node.js, MongoDB, Express, and modern web technologies.
+          </motion.span> I specialize in crafting secure back-ends and responsive front-end experiences that turn ideas into reliable products.
         </motion.p>
 
         {/* CTA Buttons */}
@@ -233,8 +232,8 @@ const Hero = () => {
           <motion.a
             href="#projects"
             className="group relative px-8 py-4 bg-primary hover:bg-orange-600 text-white font-semibold rounded-full transition-all duration-300 shadow-lg shadow-orange-500/25 overflow-hidden"
-            whileHover={{ 
-              scale: 1.05, 
+            whileHover={{
+              scale: 1.05,
               y: -2,
               boxShadow: "0 25px 50px -12px rgba(255, 122, 80, 0.4)"
             }}
@@ -263,7 +262,7 @@ const Hero = () => {
           <motion.a
             href="#contact"
             className="group px-8 py-4 border-2 border-gray-600 hover:border-primary text-gray-300 hover:text-white font-semibold rounded-full transition-all duration-300 backdrop-blur-sm"
-            whileHover={{ 
+            whileHover={{
               scale: 1.05,
               backgroundColor: "rgba(255, 122, 80, 0.1)",
               borderColor: "#FF7A50"
@@ -285,7 +284,7 @@ const Hero = () => {
 
         {/* Scroll Indicator */}
         <motion.div
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+          className="absolute bottom-8 right-8 transform -translate-x-1/2"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 2, duration: 0.8 }}
