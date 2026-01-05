@@ -141,7 +141,7 @@ const About = () => {
               className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-6 text-white"
               variants={itemVariants}
             >
-              Get a website that will make a{' '}
+              I’m a{' '}
               <motion.span
                 className="text-primary"
                 animate={{
@@ -157,18 +157,18 @@ const About = () => {
                   ease: "easeInOut"
                 }}
               >
-                lasting impression
+                Full-Stack MERN Developer
               </motion.span>{' '}
-              on your audience!!!
+              who started coding out of curiosity.
             </motion.h2>
 
             <motion.p
               className="text-text-dark mb-8 leading-relaxed"
               variants={itemVariants}
             >
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper
-              mattis, pulvinar dapibus leo. Design is not just what it looks like and feels like. Design is
-              how it works.
+              That curiosity quickly became a passion for building complete applications, from responsive user interfaces to reliable back-end systems.
+
+              I enjoy working with React, Node.js, Express, and MongoDB, especially on projects where problem-solving, clean architecture, and scalability matter. What motivates me most is creating software that feels simple to use but is thoughtfully built behind the scenes.
             </motion.p>
 
             {/* Contact Info Grid */}

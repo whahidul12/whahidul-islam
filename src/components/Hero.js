@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
+import { IoDownloadOutline } from 'react-icons/io5';
+import { FaDownload } from 'react-icons/fa';
 
 const Hero = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -260,7 +262,7 @@ const Hero = () => {
           </motion.a>
 
           <motion.a
-            href="#contact"
+            href="#"
             className="group px-8 py-4 border-2 border-gray-600 hover:border-primary text-gray-300 hover:text-white font-semibold rounded-full transition-all duration-300 backdrop-blur-sm"
             whileHover={{
               scale: 1.05,
@@ -270,14 +272,7 @@ const Hero = () => {
             whileTap={{ scale: 0.95 }}
           >
             <span className="flex items-center">
-              Let's Connect
-              <motion.span
-                className="material-icons-outlined ml-2 text-lg"
-                whileHover={{ rotate: 45 }}
-                transition={{ duration: 0.3 }}
-              >
-                arrow_outward
-              </motion.span>
+              Download CV <FaDownload className='ml-2' />
             </span>
           </motion.a>
         </motion.div>

@@ -98,7 +98,7 @@ const Skills = () => {
                     Xd
                   </span>
                 ) : (
-                  <i className={`${skill.icon} text-3xl text-${skill.color}-600 group-hover:text-primary transition-colors`}></i>
+                  < { skill.icon } />
                 )}
               </motion.div>
 
