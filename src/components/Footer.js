@@ -4,24 +4,24 @@ import { motion } from 'framer-motion';
 const Footer = () => {
   const navigationLinks = [
     { name: 'Home', href: '#' },
-    { name: 'Services', href: '#' },
-    { name: 'Portfolio', href: '#' },
-    { name: 'About', href: '#' },
-    { name: 'Contact', href: '#' }
+    { name: 'About Me', href: '#about' },
+    { name: 'My Skills', href: '#skills' },
+    { name: 'Projects', href: '#projects' },
+    { name: 'Contact Me', href: '#contact' }
   ];
 
   const contactInfo = [
-    { icon: 'call', text: '+(234) 567-8910' },
-    { icon: 'email', text: 'example@domain.com' },
-    { icon: 'location_on', text: 'Kazipur, Sirajganj, BD' },
-    { icon: 'schedule', text: 'Mon - Fri / 8am-10pm' }
+    { icon: 'call', text: '+880 183 943 9896' },
+    { icon: 'email', text: 'whahidul.islam.tech@gmail.com' },
+    { icon: 'location_on', text: 'Dilalpur, Pabna, Bangladesh' },
+    { icon: 'schedule', text: 'Mon - Sun / 8am - 10pm' }
   ];
 
   const socialLinks = [
-    { icon: 'fab fa-facebook-f', href: '#' },
-    { icon: 'fab fa-twitter', href: '#' },
-    { icon: 'fab fa-linkedin-in', href: '#' },
-    { icon: 'fab fa-instagram', href: '#' }
+    { icon: 'fab fa-github', href: 'https://github.com/whahidul12' },
+    { icon: 'fab fa-linkedin-in', href: 'https://linkedin.com/in/whahidul12' },
+    { icon: 'fab fa-twitter', href: 'https://x.com/whahidul12' },
+    { icon: 'fab fa-facebook', href: 'https://facebook.com/whahidul12' }
   ];
 
   const containerVariants = {
@@ -122,7 +122,7 @@ const Footer = () => {
               {contactInfo.map((info, index) => (
                 <motion.li
                   key={info.text}
-                  className="flex items-start group"
+                  className="flex items-center group"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.1 }}

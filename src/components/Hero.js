@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-import { IoDownloadOutline } from 'react-icons/io5';
-import { FaDownload } from 'react-icons/fa';
+import { FaCodepen } from 'react-icons/fa';
 
 const Hero = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -55,7 +54,7 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-background-dark via-secondary to-background-dark">
+    <section className="relative h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-background-dark via-secondary to-background-dark">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         {/* Gradient Orbs */}
@@ -148,7 +147,7 @@ const Hero = () => {
       >
         {/* Greeting */}
         <motion.div
-          className="mb-6"
+          className="my-6"
           variants={itemVariants}
         >
           <motion.span
@@ -228,7 +227,7 @@ const Hero = () => {
 
         {/* CTA Buttons */}
         <motion.div
-          className="flex flex-col sm:flex-row gap-6 justify-center items-center"
+          className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-12"
           variants={itemVariants}
         >
           <motion.a
@@ -243,17 +242,7 @@ const Hero = () => {
           >
             <span className="relative z-10 flex items-center">
               View My Work
-              <motion.span
-                className="material-icons-outlined ml-2 text-lg"
-                animate={{ x: [0, 5, 0] }}
-                transition={{
-                  duration: 2,
-                  repeat: Infinity,
-                  ease: "easeInOut"
-                }}
-              >
-                arrow_forward
-              </motion.span>
+              <FaCodepen className='ml-2' />
             </span>
             <motion.div
               className="absolute inset-0 bg-gradient-to-r from-orange-600 to-red-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
@@ -261,25 +250,105 @@ const Hero = () => {
             />
           </motion.a>
 
-          <motion.a
-            href="#"
-            className="group px-8 py-4 border-2 border-gray-600 hover:border-primary text-gray-300 hover:text-white font-semibold rounded-full transition-all duration-300 backdrop-blur-sm"
-            whileHover={{
-              scale: 1.05,
-              backgroundColor: "rgba(255, 122, 80, 0.1)",
-              borderColor: "#FF7A50"
-            }}
-            whileTap={{ scale: 0.95 }}
-          >
-            <span className="flex items-center">
-              Download CV <FaDownload className='ml-2' />
-            </span>
-          </motion.a>
+                  {/* Social Media Links */}
+        <motion.div
+          className="flex justify-center items-center gap-6 flex-wrap"
+          variants={itemVariants}
+        >
+          {[
+            { 
+              name: 'GitHub', 
+              icon: 'fab fa-github', 
+              url: 'https://github.com/whahidul12', 
+              color: '#333',
+              hoverColor: '#24292e'
+            },
+            { 
+              name: 'LinkedIn', 
+              icon: 'fab fa-linkedin-in', 
+              url: 'https://linkedin.com/in/whahidul12', 
+              color: '#76B947',
+              hoverColor: '#2F5233'
+            },
+            { 
+              name: 'Twitter', 
+              icon: 'fab fa-twitter', 
+              url: 'https://x.com/whahidul12', 
+              color: '#1da1f2',
+              hoverColor: '#0d8bd9'
+            },
+            { 
+              name: 'Facebook', 
+              icon: 'fab fa-facebook', 
+              url: 'https://facebook.com/whahidul12', 
+              color: '#e4405f',
+              hoverColor: '#d62976'
+            }
+          ].map((social, index) => (
+            <motion.a
+              key={social.name}
+              href={social.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group relative w-12 h-12 bg-gray-800/50 hover:bg-gray-700/50 backdrop-blur-sm rounded-full flex items-center justify-center border border-gray-700 hover:border-primary/50 transition-all duration-300"
+              initial={{ opacity: 0, y: 20, scale: 0.8 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              transition={{ 
+                delay: 1.2 + index * 0.1,
+                duration: 0.5,
+                type: "spring",
+                stiffness: 200
+              }}
+              whileHover={{ 
+                scale: 1.15,
+                y: -5,
+                boxShadow: `0 10px 25px -5px ${social.color}40`
+              }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <motion.i
+                className={`${social.icon} text-lg text-gray-400 group-hover:text-white transition-colors duration-300`}
+                whileHover={{ 
+                  color: social.color,
+                  textShadow: `0 0 10px ${social.color}60`
+                }}
+              />
+              
+              {/* Floating Animation */}
+              <motion.div
+                className="absolute inset-0 rounded-full"
+                animate={{
+                  boxShadow: [
+                    `0 0 0 0 ${social.color}00`,
+                    `0 0 0 8px ${social.color}20`,
+                    `0 0 0 0 ${social.color}00`
+                  ]
+                }}
+                transition={{
+                  duration: 2,
+                  repeat: Infinity,
+                  delay: index * 0.3,
+                  ease: "easeInOut"
+                }}
+              />
+
+              {/* Tooltip */}
+              <motion.div
+                className="absolute -top-12 left-1/2 transform -translate-x-1/2 px-3 py-1 bg-gray-900 text-white text-xs rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none whitespace-nowrap z-10"
+                initial={{ y: 10 }}
+                whileHover={{ y: 0 }}
+              >
+                {social.name}
+                <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-gray-900"></div>
+              </motion.div>
+            </motion.a>
+          ))}
+        </motion.div>
         </motion.div>
 
         {/* Scroll Indicator */}
         <motion.div
-          className="absolute -bottom-20 left-[48%] transform -translate-x-1/2"
+          className="absolute -bottom-9 left-[48%] transform -translate-x-1/2"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 2, duration: 0.8 }}
